@@ -14,7 +14,7 @@ pipeline {
 
         stage('Install Dependencies') {
             steps {
-                sh 'python3 -m pip install google-cloud-storage google-cloud-bigquery'
+                sh 'python3 -m pip install google-cloud-storage google-cloud-bigquery pytest'
             }
         }
 
