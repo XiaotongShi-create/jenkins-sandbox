@@ -1,8 +1,10 @@
 from google.cloud import storage, bigquery
+# Set your project ID
+project_id = "etl-elt"
 
 # Initialize clients
-storage_client = storage.Client()
-bq_client = bigquery.Client()
+storage_client = storage.Client(project=project_id)
+bq_client = bigquery.Client(project=project_id)
 
 # GCS bucket and file
 bucket_name = "jenkins-pipeline"
