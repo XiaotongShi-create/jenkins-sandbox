@@ -32,7 +32,7 @@ pipeline {
                 sh '''
                 export PATH=$PATH:/Users/shixiaotong/google-cloud-sdk/bin/
                 gcloud auth activate-service-account --key-file=$GCP_KEY_FILE
-                python pipeline.py
+                python3 pipeline.py
                 '''
             }
         }
