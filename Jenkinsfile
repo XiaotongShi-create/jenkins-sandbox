@@ -27,11 +27,19 @@ pipeline {
             }
         }
 
-        stage('Deploy Pipeline') {
+        stage('Debug Authentication') {
             steps {
                 sh '''
                 export PATH=$PATH:/Users/shixiaotong/google-cloud-sdk/bin/
                 gcloud auth activate-service-account --key-file=$GCP_KEY_FILE
+                gcloud auth list
+                '''
+            }
+        }
+
+        stage('Deploy Pipeline') {
+            steps {
+                sh '''
                 python3 pipeline.py
                 '''
             }
