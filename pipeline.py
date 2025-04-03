@@ -7,7 +7,7 @@ storage_client = storage.Client(project=project_id)
 bq_client = bigquery.Client(project=project_id)
 
 # GCS bucket and file
-bucket_name = "jenkins-pipeline"
+bucket_name = "jenkins-pipeline-sandbox"
 csv_filename = "Electric_Vehicle_Population_Data.csv"
 
 # Upload CSV to GCS
